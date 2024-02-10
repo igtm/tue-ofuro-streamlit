@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["igtm <github@igtm.link>"]
 readme = "README.md"
-packages = [{include = "tue_ofuro_streamlit"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
