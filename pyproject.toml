@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "tue-ofuro-streamlit"
+version = "0.1.0"
+description = ""
+authors = ["igtm <github@igtm.link>"]
+readme = "README.md"
+packages = [{include = "tue_ofuro_streamlit"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.31.0"
+openai = "^1.12.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
