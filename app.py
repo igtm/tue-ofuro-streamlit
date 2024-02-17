@@ -54,7 +54,7 @@ if prompt := st.text_area("enter article titles"):
 
     # Description
     stream = client.chat.completions.create(
-        model=st.session_state["openai_model"],
+        model="gpt-4-0613",
         messages=[
             {"role": "system", "content": DESCRIPTION_PROMPT},
             {"role": "user", "content": prompt},
@@ -66,7 +66,7 @@ if prompt := st.text_area("enter article titles"):
 
     # Tags
     stream = client.chat.completions.create(
-        model=st.session_state["openai_model"],
+        model="gpt-4-0613",
         messages=[
             {"role": "system", "content": TAG_PROMPT},
             {"role": "user", "content": prompt},
