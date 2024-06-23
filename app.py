@@ -1,7 +1,7 @@
 from openai import OpenAI
 import streamlit as st
 
-st.title("Yotube text generator powered by gpt-4-0613, dall-e-3")
+st.title("Yotube text generator powered by gpt-4o, dall-e-3")
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
@@ -42,7 +42,7 @@ if prompt := st.text_area("enter article titles"):
 
     # Title
     stream = client.chat.completions.create(
-        model="gpt-4-0613",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": TITLE_PROMPT},
             {"role": "user", "content": prompt},
@@ -54,7 +54,7 @@ if prompt := st.text_area("enter article titles"):
 
     # Description
     stream = client.chat.completions.create(
-        model="gpt-4-0613",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": DESCRIPTION_PROMPT},
             {"role": "user", "content": prompt},
@@ -66,7 +66,7 @@ if prompt := st.text_area("enter article titles"):
 
     # Tags
     stream = client.chat.completions.create(
-        model="gpt-4-0613",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": TAG_PROMPT},
             {"role": "user", "content": prompt},
